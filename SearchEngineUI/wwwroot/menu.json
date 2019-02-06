@@ -1,0 +1,36 @@
+{
+  "menuItems": [
+    {
+      "MenuItem": {
+        "name": "Geometrische Data",
+        "phone": "+32 (0)3 360.22.11"
+      },
+      "id": "L10303A4121",
+      "subItems": [
+        {
+          "id": "dikte",
+          "name": "Dikte",
+          "unit": "mm"
+        },
+        {
+          "id": "lengte",
+          "name": "Lengte",
+          "unit": "mm"
+        },
+        {
+          "id": "breedte",
+          "name": "Breedte",
+          "unit": "mm"
+        }
+      ]
+    },
+    {
+        "MenuItem": {
+            "name": "Thermische Data",
+            "phone": "+32 (0)3 360.22.12"
+        },
+      "id": "L10303A4121"
+    }
+  ]
+
+}
