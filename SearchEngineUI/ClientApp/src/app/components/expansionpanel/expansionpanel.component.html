@@ -1,0 +1,108 @@
+
+
+
+
+<mat-accordion *ngIf="menu" multi="true" layout="column">
+  <mat-expansion-panel *ngFor="let item of menu.filters">
+    <mat-expansion-panel-header>
+      <mat-panel-title>{{item.label}}</mat-panel-title>
+    </mat-expansion-panel-header>
+
+
+
+
+    <mat-tab-group>
+
+      <mat-tab *ngFor="let subItem of item.subItems" [ngSwitch]="subItem.type" label="{{subItem.label}}">
+        <!-- Case Range -->
+        <div *ngSwitchCase="'range'">
+          <mat-form-field>
+            <input matInput placeholder="{{subItem.min}}" />
+            <label matSuffix>{{subItem.unit}}</label>
+            <mat-hint>Minimale {{subItem.label}}</mat-hint>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="{{subItem.max}}" />
+            <label matSuffix>{{subItem.unit}}</label>
+            <mat-hint>Maximale {{subItem.label}}</mat-hint>
+          </mat-form-field>
+        </div>
+        <!--Case Dropdown-->
+        <div *ngSwitchCase="'dropdown'">
+          <mat-form-field>
+            <mat-select placeholder="{{subItem.label}}">
+              <mat-option *ngFor="let option of subItem.list" [value]="option.label">{{option.label}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <!-- Case Textbox -->
+        <div *ngSwitchCase="'textbox'">
+          <mat-form-field>
+            <input matInput placeholder="{{subItem.label}}" />
+          </mat-form-field>
+        </div>
+        <!-- Case Checkbox -->
+        <div *ngSwitchCase="'checkbox'">
+          <mat-checkbox>Checkbox</mat-checkbox>
+        </div>
+
+
+      </mat-tab>
+
+    </mat-tab-group>
+
+
+
+      <!-- Each possible subItem.type must be covered -->
+      <!-- Slider: step??? -->
+      <!--<mat-form-field *ngSwitchCase="'dropdown'">
+        <input matInput placeholder="{{subItem.label}}" />
+      </mat-form-field>
+
+      <mat-form-field *ngSwitchCase="'textbox'">
+        <input matInput placeholder="{{subItem.label}}" />
+      </mat-form-field>-->
+
+      <!--<mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>{{subItem.label}}</mat-panel-title>
+          </mat-expansion-panel-header>
+
+        </mat-expansion-panel>
+      </mat-accordion>-->
+
+
+      <!--<div *ngSwitchCase="'range'">
+    <label>{{subItem.min}}</label>
+    <label>{{subItem.unit}}</label>
+    <mat-slider class="example-margin"
+                [min]="'subItem.min'"
+                [max]="'subItem.max'"
+                tickInterval="1"
+                thumbLabel="1"
+                [step]="1">
+
+    </mat-slider>
+    <label>{{subItem.max}}</label>
+    <label>{{subItem.unit}}</label>
+  </div>-->
+
+      <!--<mat-checkbox *ngSwitchCase="'checkbox'">Checkbox</mat-checkbox>-->
+      <!--<input matInput *ngSwitchCase="'textbox'" placeholder="{{subItem.label}}" />-->
+      <!--<div *ngSwitchCase='range'>
+    <input matInput  placeholder="{{subItem.label}}" />
+  </div>
+  <div *ngSwitchCase='textbox'>
+    <mat-select placeholder="{{subItem.label}}"></mat-select>
+  </div>-->
+
+
+
+
+
+  </mat-expansion-panel>
+</mat-accordion>
+
+

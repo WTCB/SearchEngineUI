@@ -1,0 +1,14 @@
+.mat-form-field {
+  margin: 10px;
+}
+
+.mat-expansion-panel-header,
+.mat-expansion-panel-header:hover
+{
+  background-color: red;
+}
+
+.mat-expansion-panel-header.mat-expanded,
+.mat-expansion-panel-header.mat-expanded:hover {
+  background: red;
+}

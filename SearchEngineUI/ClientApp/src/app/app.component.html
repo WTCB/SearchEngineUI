@@ -1,0 +1,50 @@
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+
+    <span>
+      <img src="/assets/logo.png" class="d-inline-block align-middle" />
+      Techdat
+    </span>
+    <mat-icon></mat-icon>
+    <div class="container-fluid">
+
+      <button mat-button (click)="getDummyData()">Get dummy data</button>
+
+    </div>
+    <div class="float-right">
+      <button mat-button>Login</button>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<mat-toolbar color="secondtoolbar" style="height:40px">
+  <mat-toolbar-row>
+
+    <span>
+      Categories
+    </span>
+    <div class="container-fluid">
+
+      <app-sidemenu-component></app-sidemenu-component>
+
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div>
+      <app-search-component layout="column"></app-search-component>
+
+      <app-expansionpanel-component layout="column"></app-expansionpanel-component>
+    </div>
+  </div>
+  <pre>{{dummyList | json}}</pre>
+</div>
+
+
+
+

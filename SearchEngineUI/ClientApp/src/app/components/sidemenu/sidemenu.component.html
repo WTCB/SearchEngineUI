@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <mat-menu #firstMenu="matMenu">
+    <button mat-menu-item>Akoestiek</button>
+    <button mat-menu-item>Beschermende bekledingen</button>
+    <button mat-menu-item>Beton</button>
+    <button mat-menu-item>Bouwstenen</button>
+    <button mat-menu-item>Gips, vezelmaterialen, gipsplaten</button>
+    <button mat-menu-item>Glas</button>
+    <button mat-menu-item>Hout</button>
+    <button mat-menu-item>Isolatie</button>
+    <button mat-menu-item>Plaatmaterialen</button>
+    <button mat-menu-item>Steen</button>
+    <button mat-menu-item>Tegels</button>
+    <button mat-menu-item>Verf, vernissen, afwerkingen</button>
+    <button mat-menu-item>Waterdichtingen en membranen</button>
+  </mat-menu>
+  <button mat-button class="float-left" [matMenuTriggerFor]="firstMenu">Bouwmaterialen</button>
+
+  <mat-menu #secondMenu="matMenu">
+    <button mat-menu-item>Materialen</button>
+    <button mat-menu-item>Voorbereidende werken en grondwerken</button>
+    <button mat-menu-item>Onderfunderingen en funderingen</button>
+    <button mat-menu-item>...</button>
+  </mat-menu>
+  <button mat-button class="float-left" [matMenuTriggerFor]="secondMenu">Deuren</button>
+
+  <mat-menu #secondMenu="matMenu">
+    <button mat-menu-item>Beton- & werfmachines</button>
+    <button mat-menu-item>Bouwmachines</button>
+    <button mat-menu-item>Diamant</button>
+    <button mat-menu-item>...</button>
+  </mat-menu>
+  <button mat-button class="float-left" [matMenuTriggerFor]="secondMenu">Ramen</button>
+
+  <mat-menu #secondMenu="matMenu">
+    <button mat-menu-item>Beroepsverenigingen</button>
+    <button mat-menu-item>Certificering en Keurmerken</button>
+    <button mat-menu-item>Luchtdichtheidsmetingen</button>
+    <button mat-menu-item>...</button>
+  </mat-menu>
+  <button mat-button class="float-left" [matMenuTriggerFor]="secondMenu">Materieel</button>
+
+ 
+
+
+</div>
