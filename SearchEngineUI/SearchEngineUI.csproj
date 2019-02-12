@@ -28,18 +28,12 @@
     <None Remove="ClientApp\src\app\components\categorymenu\categorymenu.component.ts" />
     <None Remove="ClientApp\src\app\components\component.module.ts" />
     <None Remove="ClientApp\src\app\components\expansionpanel\expansionpanel.component.ts" />
-    <None Remove="ClientApp\src\app\components\expansionpanel\menu.json" />
     <None Remove="ClientApp\src\app\components\load items\loaditems.component.ts" />
     <None Remove="ClientApp\src\app\components\search.component.ts" />
     <None Remove="ClientApp\src\app\components\sidemenu\sidemenu.component.ts" />
     <None Remove="ClientApp\src\app\components\subcategorymenu\subcategorymenu.component.ts" />
     <None Remove="ClientApp\src\app\shared\data.service.ts" />
     <None Remove="ClientApp\src\testData.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="ClientApp\src\app\components\expansionpanel\menu.json" />
-    <Content Include="ClientApp\src\app\gevonden\menu.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -54,6 +48,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="ClientApp\src\app\gevonden\" />
     <Folder Include="ClientApp\src\app\shared\" />
   </ItemGroup>
 
