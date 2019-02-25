@@ -5,7 +5,8 @@ import {
   MatToolbarModule,
   MatIconModule,
   MatSidenavModule,
-  MatListModule
+  MatListModule,
+  MatGridListModule
 } from '@angular/material';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -15,9 +16,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from '@angular/material/menu';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
 import { ComponentModule } from './components/component.module';
+
 
 
 
@@ -41,11 +43,12 @@ import { ComponentModule } from './components/component.module';
     MatSidenavModule,
     MatListModule,
     HttpClientModule,
-  
-    
+    MatGridListModule,
+    FlexLayoutModule
   ],
   exports: [
-    MatExpansionModule
+    MatExpansionModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

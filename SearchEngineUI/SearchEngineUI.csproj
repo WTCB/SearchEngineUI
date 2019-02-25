@@ -29,6 +29,7 @@
     <None Remove="ClientApp\src\app\components\component.module.ts" />
     <None Remove="ClientApp\src\app\components\expansionpanel\expansionpanel.component.ts" />
     <None Remove="ClientApp\src\app\components\load items\loaditems.component.ts" />
+    <None Remove="ClientApp\src\app\components\materialcard\materialcard.component.ts" />
     <None Remove="ClientApp\src\app\components\search.component.ts" />
     <None Remove="ClientApp\src\app\components\sidemenu\sidemenu.component.ts" />
     <None Remove="ClientApp\src\app\components\subcategorymenu\subcategorymenu.component.ts" />
@@ -41,6 +42,7 @@
     <TypeScriptCompile Include="ClientApp\src\app\components\component.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\components\expansionpanel\expansionpanel.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\components\load items\loaditems.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\components\materialcard\materialcard.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\components\search\search.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\components\sidemenu\sidemenu.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\components\subcategorymenu\subcategorymenu.component.ts" />

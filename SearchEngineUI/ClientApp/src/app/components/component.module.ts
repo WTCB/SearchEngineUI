@@ -12,10 +12,10 @@ import {
   MatSliderModule,
   MatFormFieldModule,
   MatCheckboxModule,
-  MatTabsModule
-
-  
+  MatTabsModule,
+  MatGridListModule
 } from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { ExpansionpanelComponent } from './expansionpanel/expansionpanel.component';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -27,7 +27,8 @@ import { CategoryMenuComponent } from './categorymenu/categorymenu.component';
 import { FormsModule } from '@angular/forms';
 import { SubcategoryMenuComponent } from './subcategorymenu/subcategorymenu.component';
 import { FormBuilder, FormGroup } from '@angular/forms';
-
+import { MaterialCardComponent } from './materialcard/materialcard.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [
@@ -47,11 +48,25 @@ import { FormBuilder, FormGroup } from '@angular/forms';
     MatSliderModule,
     MatFormFieldModule,
     MatCheckboxModule,
-    MatTabsModule
-   
+    MatTabsModule,
+    HttpClientModule,
+    MatGridListModule,
+    FlexLayoutModule
   ],
-  declarations: [SearchComponent, ExpansionpanelComponent, SidemenuComponent, CategoryMenuComponent, SubcategoryMenuComponent],
-  exports: [SearchComponent, ExpansionpanelComponent, SidemenuComponent, CategoryMenuComponent, SubcategoryMenuComponent],
+  declarations: [
+    SearchComponent,
+    ExpansionpanelComponent,
+    SidemenuComponent,
+    CategoryMenuComponent,
+    SubcategoryMenuComponent,
+    MaterialCardComponent],
+
+  exports: [SearchComponent,
+    ExpansionpanelComponent,
+    SidemenuComponent,
+    CategoryMenuComponent,
+    SubcategoryMenuComponent,
+    MaterialCardComponent],
   entryComponents: [CategoryMenuComponent, SubcategoryMenuComponent]
 })
 export class ComponentModule {

@@ -1,50 +1,70 @@
+<div fxLayout="column">
+  <mat-toolbar>
+    <mat-toolbar-row>
 
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
+      <span>
+        <img src="/assets/logo.png" class="d-inline-block align-middle" />
+        Techdat
+      </span>
+      <mat-icon></mat-icon>
+      <div class="container-fluid">
 
-    <span>
-      <img src="/assets/logo.png" class="d-inline-block align-middle" />
-      Techdat
-    </span>
-    <mat-icon></mat-icon>
-    <div class="container-fluid">
+        <button mat-button (click)="getDummyData()">Get dummy data</button>
 
-      <button mat-button (click)="getDummyData()">Get dummy data</button>
+      </div>
+      <div class="float-right">
+        <button mat-raised-button>Login</button>
+        <button mat-raised-button>LAnguage</button>
+      </div>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
 
-    </div>
-    <div class="float-right">
-      <button mat-button>Login</button>
-    </div>
-  </mat-toolbar-row>
-</mat-toolbar>
-
-
-<mat-toolbar color="secondtoolbar" style="height:40px">
-  <mat-toolbar-row>
-
-    <span>
-      Categories
-    </span>
-    <div class="container-fluid">
-
+      <span>
+        Categories
+      </span>
       <app-sidemenu-component></app-sidemenu-component>
 
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+
+  <div class="contact-full-width" fxLayout.xs="column" fxLayoutAlign="flex-start">
+
+    <div class="container" fxFlex="30%" fxFlex.md="40%" fxFlex.sm="50%" fxFlex.xs="60%" fxLayoutGap="1% grid">
+      <app-search-component></app-search-component>
+      <app-expansionpanel-component></app-expansionpanel-component>
     </div>
-  </mat-toolbar-row>
-</mat-toolbar>
+    
 
+    <div class="container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="1% grid" fxLayoutAlign="center" fxFlex="70%" fxFlex.md="60%" fxFlex.sm="50%" fxFlex.xs="40%">
+      
 
-<div class="container-fluid">
-  <div class="row">
-    <div>
-      <app-search-component layout="column"></app-search-component>
-
-      <app-expansionpanel-component layout="column"></app-expansionpanel-component>
+      <div fxFlex="20%" fxFlex.md="33%" fxFlex.sm="40%" fxFlex.xs="50%">
+        <app-materialcard-component></app-materialcard-component>
+      </div>
+      <div fxFlex="20%" fxFlex.md="33%" fxFlex.sm="40%" fxFlex.xs="50%">
+        <app-materialcard-component></app-materialcard-component>
+      </div>
+      <div fxFlex="20%" fxFlex.md="33%" fxFlex.sm="40%" fxFlex.xs="50%">
+        <app-materialcard-component></app-materialcard-component>
+      </div>
+      <div fxFlex="20%" fxFlex.md="33%" fxFlex.sm="40%" fxFlex.xs="50%">
+        <app-materialcard-component></app-materialcard-component>
+      </div>
+      <div fxFlex="20%" fxFlex.md="33%" fxFlex.sm="40%" fxFlex.xs="50%">
+        <app-materialcard-component></app-materialcard-component>
+      </div>
+      <div fxFlex="20%" fxFlex.md="33%" fxFlex.sm="40%" fxFlex.xs="50%">
+        <app-materialcard-component></app-materialcard-component>
+      </div>
+      <div fxFlex="20%" fxFlex.md="33%" fxFlex.sm="40%" fxFlex.xs="50%">
+        <app-materialcard-component></app-materialcard-component>
+      </div>
     </div>
+
+<pre>{{dummyList | json}}</pre>
+
   </div>
-  <pre>{{dummyList | json}}</pre>
-</div>
-
 
 
 

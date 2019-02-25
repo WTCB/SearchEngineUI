@@ -1,0 +1,84 @@
+﻿{
+    "filters": [
+        {
+
+            "id": "0",
+            "label": "Geometrische Data",
+
+            "subItems": [
+                {
+                    "id": "00",
+                    "label": "Dikte",
+                    "type": "range",
+                    "unit": "cm",
+                    "min": 0,
+                    "max": 100
+                },
+                {
+                    "id": "01",
+                    "label": "Lengte",
+                    "type": "dropdown",
+                    "unit": "m",
+                    "min": 0,
+                    "max": 5
+                },
+                {
+                    "id": "02",
+                    "label": "Breedte",
+                    "type": "range",
+                    "unit": "cm",
+                    "min": 0,
+                    "max": 300
+                }
+            ]
+        },
+        {
+
+            "id": "1",
+            "label": "Thermische prestaties",
+
+            "subItems": [
+                {
+                    "id": "10",
+                    "label": "Warmtegeleidingscoëfficiënt",
+                    "type": "checkbox",
+                    "unit": "W/(m.K)",
+                    "min": 0,
+                    "max": 0.2
+                    
+                },
+                {
+                    "id": "11",
+                    "label": "Thermische weerstand",
+                    "type": "textbox",
+                    "unit": "m2.K/W",
+                    "min": 0,
+                    "max": 200
+                }
+            ]
+
+        },
+        {
+            "id": "2",
+            "label": "Testkarakteristieken",
+            "subItems": [
+                {
+                    "id": "20",
+                    "label": "Test Dropdown",
+                    "type": "dropdown",
+                    "unit": "test",
+                    "list": [
+                        {
+                            "id": "200",
+                            "label": "option 1"
+                        },
+                        {
+                            "id": "201",
+                            "label": "option 2"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,28 +1,21 @@
-
-
-
-
 <mat-accordion *ngIf="menu" multi="true" layout="column">
-  <mat-expansion-panel *ngFor="let item of menu.filters">
+  <mat-expansion-panel *ngFor="let item of menu.filters"  class="testclass">
     <mat-expansion-panel-header>
       <mat-panel-title>{{item.label}}</mat-panel-title>
     </mat-expansion-panel-header>
 
+    <mat-tab-group color="accent">
 
-
-
-    <mat-tab-group>
-
-      <mat-tab *ngFor="let subItem of item.subItems" [ngSwitch]="subItem.type" label="{{subItem.label}}">
-        <!-- Case Range -->
+      <mat-tab *ngFor="let subItem of item.subItems" [ngSwitch]="subItem.type" >
+       
         <div *ngSwitchCase="'range'">
-          <mat-form-field>
-            <input matInput placeholder="{{subItem.min}}" />
+          <mat-form-field fxFlex="100px">
+            <input  matInput placeholder="{{subItem.min}}" />
             <label matSuffix>{{subItem.unit}}</label>
             <mat-hint>Minimale {{subItem.label}}</mat-hint>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="100px">
             <input matInput placeholder="{{subItem.max}}" />
             <label matSuffix>{{subItem.unit}}</label>
             <mat-hint>Maximale {{subItem.label}}</mat-hint>
@@ -46,7 +39,6 @@
         <div *ngSwitchCase="'checkbox'">
           <mat-checkbox>Checkbox</mat-checkbox>
         </div>
-
 
       </mat-tab>
 

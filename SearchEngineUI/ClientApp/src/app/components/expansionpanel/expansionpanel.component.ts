@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 
@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   templateUrl: './expansionpanel.component.html',
   selector: 'app-expansionpanel-component',
-  styleUrls: ['./expansionpanel.component.css']
+  styleUrls: ['./expansionpanel.component.scss']
 })
 
 export class ExpansionpanelComponent implements OnInit {
@@ -24,7 +24,10 @@ export class ExpansionpanelComponent implements OnInit {
   }
 
   getJson() {
-    this.http.get('./menu.json')
+    let headers = new HttpHeaders();
+    headers.append('Accept-Charset', 'utf-8');
+    //console.log(headers.get('Accept-Charset'));
+    this.http.get('./menu1.json', { headers: headers})
       .subscribe((data: Menu) => {
         this.menu = data;
 
